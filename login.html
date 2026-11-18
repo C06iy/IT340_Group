@@ -1,0 +1,48 @@
+<!doctype htm>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sign in to Dossier</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="brand" href="index.html" aria-label="Dossier home">Dossier <small>.org</small></a>
+ 
+      <div class="mid">
+        <p class="mid-text">Create your free website/profile here! &rarr;</p>
+      </div>
+ 
+      <div class="action">
+        <a class="btn" href="register.html">Register</a>
+      </div>
+    </div>
+  </header>
+ 
+  <main class="auth">
+    <div class="box">
+      <p class="eyebrow">Welcome back!</p>
+      <h1>Sign in</h1>
+      <form id="loginForm" novalidate>
+        <div>
+          <label for="loginUser">Username</label>
+          <div class="domain">
+            <input id="loginUser" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="your-site-name">
+            <span>.dossier.org</span>
+          </div>
+        </div>
+        <div>
+          <label for="loginPass">Password</label>
+          <input id="loginPass" name="password" type="password" autocomplete="current-password">
+        </div>
+        <button class="btn wide" type="submit">Sign in</button>
+      </form>
+    </div>
+  </main>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

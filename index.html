@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dossier</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="brand" href="index.html" aria-label="Dossier home">Dossier<small>.org</small></a> 
+
+      <div class="mid">
+        <form class="search" role="search" id="searchForm" autocomplete="off">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+          <input id="searchInput" type="search" placeholder="Search profiles" aria-label="Search profiles" aria-controls="results" aria-expanded="false">
+          <ul class="results" id="results" hidden></ul>
+        </form>
+      </div>
+
+      <div class="action">
+        <a class="btn" href="login.html">Login / Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap mission">
+      <p class="eyebrow">Mission Statement:</p>
+      <h2>Creating and hosting your work, no matter the medium, is paramount to expressing yourself. Your own website should <em>never limit you</em> in reflecting that.</h2>
+    </div>
+
+    <section class="tools">
+      <div class="wrap">
+        <p class="eyebrow">Freeform tools</p>
+        <h2>Everything you need to put your work in one place</h2>
+        <ul class="tool-list">
+          <li class="tool"><span class="tab">Host</span><p><strong>Create your own profile</strong> to host one static website.</p></li>
+          <li class="tool"><span class="tab">Share</span><p><strong>Share your own website</strong> with its own URL domain with everyone!</p></li>
+          <li class="tool"><span class="tab">Embed</span><p><strong>Embed your own resumes, pictures,</strong> and link your social media accounts for finding your projects.</p></li>
+          <li class="tool"><span class="tab">Build</span><p><strong>Freeform tools</strong> to make your website's vision limitless and as expressive as you!</p></li>
+          <li class="tool"><span class="tab">Follow</span><p><strong>Follow other people's profiles,</strong> and favorite and comment on their own webpages.</p></li>
+          <li class="tool"><span class="tab">Export</span><p><strong>Export your webpage into a poster, resume or document</strong> for gigs you're advertising to play or host, for networking events where you'd like to leave an impression, or simply to keep a hard copy of your own written works. You keep it, and we help you build it.</p></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
