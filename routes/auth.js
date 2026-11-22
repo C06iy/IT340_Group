@@ -6,7 +6,7 @@ const {
     createUser,
     findUserByUsername,
     findUserByUsernameOrEmail
-} = require("../models/User");
+} = require("../models/user");
 
 const router = express.Router();
 
