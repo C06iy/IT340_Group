@@ -2,6 +2,7 @@
 //Responsible for handling REST APIs
 const express = require("express");
 const bcrypt = require("bcrypt"); //Responsible for password hashing
+const jwt = require("jsonwebtoken"); //responsible for web tokens
 
 const {
     createUser,
@@ -137,6 +138,12 @@ router.post("/login", async (req, res) => {
             user.password_hash
         );
 
+	const token = jwt.sign(
+	    { userId: user.id},
+	    process.env.JWT_SECRET,
+	    { expiresIn: process.env.JWT_EXPIRES_IN || "15m"}
+	);
+
         if (!isMatch) {
             return res.status(401).json({
                 message: "Invalid username or password."
@@ -145,6 +152,7 @@ router.post("/login", async (req, res) => {
 
         return res.status(200).json({
             message: "Login successful.",
+            token,
             user: {
                 id: user.id,
                 username: user.username,
