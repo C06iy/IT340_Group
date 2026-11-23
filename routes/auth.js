@@ -1,6 +1,7 @@
-
+//File for handling registration and login endpoints. Communication occurs between FE and BE here.
+//Responsible for handling REST APIs
 const express = require("express");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt"); //Responsible for password hashing
 
 const {
     createUser,
@@ -8,15 +9,15 @@ const {
     findUserByUsernameOrEmail
 } = require("../models/user");
 
-const router = express.Router();
+const router = express.Router(); //Express creates router object, used for functions such as API routes.
 
-// Registration endpoint
-router.post("/register", async (req, res) => {
+// Registration endpoint 
+router.post("/register", async (req, res) => { //Express handles POST requests sent to /register.
     try {
         const { username, email, password } = req.body;
 
 	if (typeof username !== "string" || typeof email !== "string" || typeof password !== "string") {
-	    return res.status(400).json({
+	    return res.status(400).json({ //HTTP 400 = Bad request, client has made an error with entering information
 		message: "Invalid input types."
 	    });
 	}
@@ -26,8 +27,9 @@ router.post("/register", async (req, res) => {
                 message: "All fields are required."
             });
         }
+        //Regex is uses for handling validation of passwords, usernames, and emails.
 
-	const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,64}$/;
+	const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,64}$/; 
 
         if (!passwordRegex.test(password)) {
             return res.status(400).json({
@@ -62,7 +64,7 @@ router.post("/register", async (req, res) => {
         );
 
         if (existingUser) {
-            return res.status(409).json({
+            return res.status(409).json({ //HTTP 409 = Conflict with the request made
                 message: "Username or email already exists."
             });
         }
@@ -76,7 +78,7 @@ router.post("/register", async (req, res) => {
 
 
 
-        const passwordHash = await bcrypt.hash(password, 12);
+        const passwordHash = await bcrypt.hash(password, 12); //Specific code for hashing passwords. 12 = cost factor, determines security of hashes.
 
         const newUser = await createUser(
             normalizedUsername,
@@ -84,7 +86,7 @@ router.post("/register", async (req, res) => {
             passwordHash
         );
 
-        return res.status(201).json({
+        return res.status(201).json({ //HTTP 201 = Successful status code, server successful in achieving request
             message: "Account created successfully.",
             user: {
                 id: newUser.id,
@@ -96,13 +98,13 @@ router.post("/register", async (req, res) => {
     } catch (error) {
         console.error("Registration error:", error);
 
-        if (error.code === "23505") {
+        if (error.code === "23505") { //PG error code 23505, means there's an error from unique constraint violation
             return res.status(409).json({
                 message: "Username or email already exists."
             });
         }
 
-        return res.status(500).json({
+        return res.status(500).json({ //HTTP 500 is a catch all status code for catching unexpected conditions
             message: "An error occurred during registration."
         });
     }

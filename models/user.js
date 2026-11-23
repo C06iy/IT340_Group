@@ -1,10 +1,13 @@
-const { pool } = require("../config/db");
+//File responsible for providing functions for requesting database operations related to users 
 
-// Create a new user
+
+const { pool } = require("../config/db"); //imports pool project from db.js
+
+// Create a new user through an async function, back end is requesting this from database
 const createUser = async (username, email, passwordHash) => {
     const query = `
         INSERT INTO users (username, email, password_hash)
-        VALUES ($1, $2, $3)
+        VALUES ($1, $2, $3) //known as parameterized queries, SQL injection protection. Separates SQL input from input code.
         RETURNING id, username, email, created_at
     `;
 

@@ -1,17 +1,19 @@
+//File responsible for initializing and starting Node.js, as well as handling incoming HTTP requests and actively connects BE to PostgreSQL
+require("dotenv").config();
+
 const express = require("express");
-const dotenv = require("dotenv");
 const authRoutes = require("./routes/auth");
 const { connectDB } = require("./config/db");
 
-dotenv.config();
 
-const app = express();
 
-app.use(express.json());
+const app = express(); //creates express app, handles important tasks such as HTTP requests
 
-app.use("/api/auth", authRoutes);
+app.use(express.json()); //allows JSON data to be read
 
-const PORT = process.env.PORT || 3000;
+app.use("/api/auth", authRoutes); //Use routes defined in routes/auth.js
+
+const PORT = process.env.PORT || 3000; //Port number for Node.js
 
 const startServer = async () => {
     await connectDB();
