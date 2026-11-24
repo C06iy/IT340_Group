@@ -6,22 +6,37 @@
   <title>Dossier</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <style>[v-cloak] { display: none; }</style>
+
 </head>
-<body>
+<body data-page="home">
+<div id="app" v-cloak>
   <header class="bar">
     <div class="bar-inner">
-      <a class="brand" href="index.html" aria-label="Dossier home">Dossier<small>.org</small></a> 
+      <a class="brand" href="index.html" aria-label="Dossier home">Dossier<small>.org</small></a>
 
-      <div class="mid">
-        <form class="search" role="search" id="searchForm" autocomplete="off">
+      <div class="mid" ref="searchBox">
+        <form class="search" role="search" id="searchForm" autocomplete="off" @submit.prevent="showResults">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
-          <input id="searchInput" type="search" placeholder="Search profiles" aria-label="Search profiles" aria-controls="results" aria-expanded="false">
-          <ul class="results" id="results" hidden></ul>
+          <input id="searchInput" type="search" placeholder="Search profiles" aria-label="Search profiles" aria-controls="results" :aria-expanded="String(open)"
+                 v-model="query" @input="showResults" @focus="showResults">
+          <ul class="results" id="results" :hidden="!open">
+            <li class="hd">Profiles</li>
+            <li class="none" v-if="!results.length">No profiles found.</li>
+            <li class="row" v-for="p in results" :key="p.user">
+              <div class="u">{{ p.user }}.dossier.org</div>
+              <div class="d">{{ p.desc }}</div>
+            </li>
+          </ul>
         </form>
       </div>
 
       <div class="action">
-        <a class="btn" href="login.html">Login / Register</a>
+        <template v-if="user">
+          <span style="font-family: var(--font-mono); font-size: 0.85rem; margin-right: 10px;">{{ user.username }}</span>
+          <button class="btn" type="button" @click="logout">Sign out</button>
+        </template>
+        <a class="btn" href="login.html" v-else>Login / Register</a>
       </div>
     </div>
   </header>

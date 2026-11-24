@@ -6,16 +6,20 @@
   <title>Sign in to Dossier</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <style>[v-cloak] { display: none; }</style>
+
 </head>
-<body>
+<body data-page="login">
+<div id="app" v-cloak>
   <header class="bar">
     <div class="bar-inner">
       <a class="brand" href="index.html" aria-label="Dossier home">Dossier <small>.org</small></a>
- 
+
       <div class="mid">
         <p class="mid-text">Create your free website/profile here! &rarr;</p>
       </div>
- 
+
+
       <div class="action">
         <a class="btn" href="register.html">Register</a>
       </div>
@@ -26,23 +30,26 @@
     <div class="box">
       <p class="eyebrow">Welcome back!</p>
       <h1>Sign in</h1>
-      <form id="loginForm" novalidate>
+      <form id="loginForm" novalidate @submit.prevent="submit">
         <div>
           <label for="loginUser">Username</label>
           <div class="domain">
-            <input id="loginUser" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="your-site-name">
+            <input id="loginUser" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="your-site-name" v-model.trim="form.username">
             <span>.dossier.org</span>
           </div>
         </div>
         <div>
           <label for="loginPass">Password</label>
-          <input id="loginPass" name="password" type="password" autocomplete="current-password">
+          <input id="loginPass" name="password" type="password" autocomplete="current-password" v-model="form.password">
         </div>
-        <button class="btn wide" type="submit">Sign in</button>
+        <button class="btn wide" type="submit" :disabled="busy">Sign in</button>
+        <p class="msg" :class="msg.kind" role="status">{{ msg.text }}</p>
       </form>
     </div>
   </main>
+</div>
  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
