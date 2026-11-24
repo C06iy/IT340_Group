@@ -10,15 +10,38 @@
     el.textContent = text;
     el.className = 'msg' + (kind ? ' ' + kind : '');
   }
- 
+  /* JS code that interacts with Backend */
+ async function loginUser(username, password) {
+    const response = await fetch(
+        "http://backend_vm_ip:3000/api/auth/login",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username,
+                password
+            })
+        }
+    );
+
+    const data = await response.json();
+
+    console.log(data.message);
+}
+
   /* Homepage: profile search */
   var input = document.getElementById('searchInput');
   var list = document.getElementById('results');
+  if (input && list) {
     var closeResults = function () {
       list.hidden = true;
       input.setAttribute('aria-expanded', 'false');
     };
-      }
+
+    var showResults = function () {
+      var html = '';
       list.innerHTML = html;
       list.hidden = false;
       input.setAttribute('aria-expanded', 'true');
@@ -41,4 +64,5 @@
   var loginForm = document.getElementById('loginForm');
   /* Register page */
   var registerForm = document.getElementById('registerForm');
+})();
 
