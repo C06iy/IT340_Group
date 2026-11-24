@@ -1,0 +1,11 @@
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled; preset: enabled)
+     Active: active (exited) since Mon 2026-11-23 18:34:40 EST; 6min ago
+ Invocation: c9dd7514bcb34e6bbfc5c1f2ee0559ce
+    Process: 19236 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 19236 (code=exited, status=0/SUCCESS)
+   Mem peak: 2M
+        CPU: 9ms
+
+Nov 23 18:34:40 oceanna-geroge-VMware-Virtual-Platform systemd[1]: Starting postgresql.service - PostgreSQL RDBMS...
+Nov 23 18:34:40 oceanna-geroge-VMware-Virtual-Platform systemd[1]: Finished postgresql.service - PostgreSQL RDBMS.

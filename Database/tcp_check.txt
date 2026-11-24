@@ -1,0 +1,10 @@
+ 1249  ls -a
+ 1250  ls
+ 1251  tree
+ 1252  cd /Desktop/Dossier
+ 1253  cd Desktop/Dossier
+ 1254  ls
+ 1255  sudo journalctl -u postgresql -f
+ 1256  sudo tcpdump -i taiscale0 port 5432
+ 1257  sudo tcpdump -i tailscale0 port 5432
+ 1258  history 10 >> tcp_check.txt

@@ -1,0 +1,885 @@
+  882  sudo dpkg -i oeg-package.deb
+  883  which oeg-cowsay.sh
+  884  tree
+  885  sudo dpkg -r oeg-package
+  886  which oeg-cowsay.sh
+  887  cd 
+  888  ls
+  889  cd Downloads/
+  890  ls
+  891  dpkg-deb --info ni94-package.deb 
+  892  dpkg-deb --contents ni94-package.deb 
+  893  sudo dpkg -i ni94-package.deb
+  894  ./ni94-cowsay.sh
+  895  tree
+  896  cat ni94-package.deb 
+  897  sudo ./ni94-cowsay.sh
+  898  s./ni94-cowsay.sh
+  899  ls -l /usr/bin/ni94-cowsay.sh
+  900  sudo nano  /usr/bin/ni94-cowsay.sh
+  901  dpkg-deb --contents ni94-package.deb 
+  902  cat -v /usr/bin/ni94-cowsay.sh
+  903  ls -l /bin/bash
+  904  sudo dpkg -r ni94-package.deb
+  905  sudo 
+  906  which ni94-cowsay.sh
+  907  sudo dpkg -i ni94-package.deb
+  908  sudo dpkg -r ni94-package.deb
+  909  sudo dpkg -r ni94-package
+  910  which ni94-cowsay.sh
+  911  cd
+  912  touch history >> Lab6_history
+  913  ls
+  914  rm Lab6_history 
+  915  ls
+  916  touch history >> Lab6_history.txt
+  917  ls
+  918  cat Lab6_history.txt 
+  919  nano Lab6_history.txt 
+  920  history
+  921  ~/bash._history
+  922  pwd
+  923  ls
+  924  cd home
+  925  ls
+  926  cd oceanna-geroge
+  927  ls
+  928  cat history
+  929  ~/.bash_history
+  930  sudo ~/.bash_history
+  931  history
+  932  echo $HISTFILE
+  933  echo $HISTSIZE
+  934  ls -R
+  935  ls -a
+  936  ls -a ~
+  937  ls history
+  938  cat history
+  939  cat /var/log/dpkg.log
+  940  tree
+  941  ls
+  942  cat Lab6_history.txt 
+  943  ls
+  944  cd Desktop/
+  945  ls
+  946  cd lab_6
+  947  ls
+  948  tree
+  949  quit
+  950  exit
+  951  ps aux
+  952  pst
+  953  sleep 60 &
+  954  jobs
+  955  kill 33647
+  956  jobs
+  957  htop
+  958  top
+  959  ps 
+  960  ps a
+  961  ps au
+  962  ps aux > log.txt
+  963  exit
+  964  sleep 60 & 
+  965  ps aux
+  966  sleep 60 & 
+  967  jobs
+  968  ps aux | grep 6506
+  969  kill -s 15 6506
+  970  ps aux | grep 6506
+  971  systemctl status
+  972  systemctl status apache2
+  973  sudo systemctl stop apache2
+  974  systemctl status apache2
+  975  sudo systemctl start apache2
+  976  systemctl status apache2
+  977  cd
+  978  pwd
+  979  tree
+  980  ls
+  981  cd Desktop
+  982  ls
+  983  mkdir Lab_7
+  984  cd
+  985  cd /Desktop/Lab_7
+  986  cd /Desktop/Lab_7/
+  987  cd Desktop/Lab_7/
+  988  pwd
+  989  ssh -v
+  990  sudo apt openssh-server
+  991  sudo apt install openssh-server
+  992  ssh -v
+  993  ssh -V
+  994  sudo systemctl start ssh
+  995  ps aux
+  996  ps aux | grep ssh
+  997  pidof sshd
+  998  sudo kill 26970
+  999  ps aux | grep ssh
+ 1000  systemctl status ssh
+ 1001  sudo systemctl stop ssh
+ 1002  sudo systemctl status ssh
+ 1003  sudo systemctl start ssh
+ 1004  systemctl status ssh
+ 1005  sudo systemctl restart ssh
+ 1006  sudo systemctl enable ssh
+ 1007  sudo systemctl is-enabled ssh
+ 1008  cat history 20
+ 1009  history 40 > Lab7_history.txt
+ 1010  ls
+ 1011  cat Lab7_history.txt 
+ 1012  nano Lab7_history.txt 
+ 1013  cat Lab7_history.txt 
+ 1014  exit
+ 1015  tree
+ 1016  ls
+ 1017  cd
+ 1018  ls
+ 1019  cd ..
+ 1020  ls
+ 1021  cd oceanna-geroge/
+ 1022  ls
+ 1023  ls /var/log
+ 1024  ls /var/www
+ 1025  ls /var/www/html
+ 1026  pwd
+ 1027  ls /var
+ 1028  cd /var/www/html
+ 1029  ls
+ 1030  cat index.html
+ 1031  ls
+ 1032  nano index.html
+ 1033  ls -l
+ 1034  ls -a
+ 1035  ls -l
+ 1036  touch public.html
+ 1037  sudo touch public.html
+ 1038  ls
+ 1039  ls -l
+ 1040  ls
+ 1041  cat puclic.html
+ 1042  ls
+ 1043  sudo rm public.html
+ 1044  ls
+ 1045  sudo mkdir css
+ 1046  sudo mkdir js
+ 1047  ls
+ 1048  cd
+ 1049  ls
+ 1050  cd Downloads/
+ 1051  ls
+ 1052  sudo mv login.html register.html styles.css script.js /var/www/html
+ 1053  cd /var/www/html
+ 1054  ls
+ 1055  cd
+ 1056  cd Downloads/
+ 1057  sudo mv index.html index.html
+ 1058  sudo mv index.html index.html /var/www/html
+ 1059  sudo mv index.html /var/www/html
+ 1060  ls
+ 1061  mv index (1).html index.html
+ 1062  ls
+ 1063  sudo mv index.html /var/www/html
+ 1064  ls
+ 1065  cd /var/www/html
+ 1066  ls
+ 1067  cat index.html
+ 1068  git status
+ 1069  cd
+ 1070  ls
+ 1071  tree
+ 1072  ls
+ 1073  cd Desktop
+ 1074  ls
+ 1075  cd Dossier/
+ 1076  ls
+ 1077  git status
+ 1078  git track
+ 1079  git branch
+ 1080  git status
+ 1081  git add index.hmtl
+ 1082  cd 
+ 1083  ls
+ 1084  cd /var/www/html
+ 1085  ls
+ 1086  sudo cp index.html login.html register.html script.js styles.css /Desktop/Dossier
+ 1087  cd /Desktop/Dossier
+ 1088  cd
+ 1089  ls
+ 1090  pwd
+ 1091  cd Desktop/Dossier
+ 1092  ls
+ 1093  pwd
+ 1094  cd /var/www/html
+ 1095  sudo cp index.html login.html register.html script.js styles.css /home/oceanna-geroge/Desktop/Dossier
+ 1096  ls
+ 1097  cd /home/oceanna-geroge/Desktop/Dossier
+ 1098  ls
+ 1099  git status
+ 1100  git branch
+ 1101  git checkout front_end
+ 1102  git branch
+ 1103  git status
+ 1104  git add .
+ 1105  git commit
+ 1106  git status
+ 1107  git push origin front_end
+ 1108  git branch
+ 1109  git remote -v
+ 1110  git push -u origin front_end
+ 1111  sudo systemctl apache2
+ 1112  cd
+ 1113  quit
+ 1114  exit
+ 1115  ls
+ 1116  cd Desktop
+ 1117  ls
+ 1118  cd Dosier
+ 1119  cd Dossier
+ 1120  ls
+ 1121  git status
+ 1122  git checkout branch
+ 1123  git branch
+ 1124  git checkout master
+ 1125  git status
+ 1126  cd
+ 1127  pwd
+ 1128  ip address show
+ 1129  ip route
+ 1130  ip link state
+ 1131  ip link
+ 1132  ip a
+ 1133  ip link set en33 down
+ 1134  ip link set ens33 down
+ 1135  sudo ip link set ens33 down
+ 1136  ping google.com
+ 1137  sudo ip link set ens33 up
+ 1138  ping google.com
+ 1139  ip a
+ 1140  sudo ip link set ens33 down
+ 1141  ip a
+ 1142  sudo ip link set ens33 up
+ 1143  sudo ip link set ens33 down
+ 1144  sudo ip link set ens33 up
+ 1145  ip a
+ 1146  sudo ip a 192.168.1.100/24 dev ens33
+ 1147  sudo ip addr 192.168.1.100/24 dev ens33
+ 1148  ping google.com
+ 1149  history 20 >> recent_history.txt
+ 1150  ls
+ 1151  cat recent_history.txt 
+ 1152  history 80 >> recent_history.txt
+ 1153  ls
+ 1154  cat recent_history.txt 
+ 1155  rm recent_history.txt
+ 1156  ls
+ 1157  ufw status
+ 1158  sudo ufw status
+ 1159  tailscale status
+ 1160  tailscale version
+ 1161  sudo tailscale UP
+ 1162  tailscale status
+ 1163  cd /var/log
+ 1164  ls
+ 1165  cat syslog.1
+ 1166  ls
+ 1167  cd aoache2
+ 1168  cd apache2
+ 1169  ls
+ 1170  cd
+ 1171  apache2 status
+ 1172  history >> alltimehistory.txt
+ 1173  ls
+ 1174  vi alltimehistory.txt
+ 1175  ip a show
+ 1176  ipconfig
+ 1177  ip config
+ 1178  ip address
+ 1179  ipconfig
+ 1180  vi alltimehistory.txt
+ 1181  hostname -I
+ 1182  ip route
+ 1183  clear
+ 1184  exit
+ 1185  tailscale status
+ 1186  tailscale -v
+ 1187  ls
+ 1188  systemctl status
+ 1189  systemctl tailscale status
+ 1190  vi alltimehistory.txt
+ 1191  tailscale status
+ 1192  ip a
+ 1193  tailscale UP
+ 1194  sudo tailscale UP
+ 1195  ip a
+ 1196  tailscale UP
+ 1197  tailscale status
+ 1198  sudo tailscale UP
+ 1199  ip a
+ 1200  ping 100.116.178.80
+ 1201  ip a
+ 1202  hostname -I
+ 1203  ip a
+ 1204  sudo nano /etc/netplan/01-netcfg.yaml
+ 1205  sudo netplan generate
+ 1206  sudo nano /etc/netplan/01-netcfg.yaml
+ 1207  sudo netplan generate
+ 1208  sudo nano /etc/netplan/01-netcfg.yaml
+ 1209  sudo netplan generate
+ 1210  sudo netplan applu
+ 1211  sudo netplan apply
+ 1212  sudo nano /etc/netplan/01-netcfg.yaml
+ 1213  sudo netplan generate
+ 1214  sudo nano /etc/netplan/01-netcfg.yaml
+ 1215  sudo netplan generate
+ 1216  sudo nano /etc/netplan/01-netcfg.yaml
+ 1217  sudo netplan generate
+ 1218  sudo nano /etc/netplan/01-netcfg.yaml
+ 1219  sudo netplan generate
+ 1220  sudo nano /etc/netplan/01-netcfg.yaml
+ 1221  sudo netplan generate
+ 1222  sudo nano /etc/netplan/01-netcfg.yaml
+ 1223  sudo netplan generate
+ 1224  sudo nano /etc/netplan/01-netcfg.yaml
+ 1225  sudo netplan generate
+ 1226  sudo nano /etc/netplan/01-netcfg.yaml
+ 1227  sudo netplan generate
+ 1228  sudo nano /etc/netplan/01-netcfg.yaml
+ 1229  sudo netplan generate
+ 1230  sudo nano /etc/netplan/01-netcfg.yaml
+ 1231  sudo netplan generate
+ 1232  ip addr
+ 1233  sudo netplan apply
+ 1234  ip addr
+ 1235  ip route
+ 1236  sudo nano /etc/netplan/01-netcfg.yaml
+ 1237  sudo nano /etc/netplan/02-netcfg.yaml
+ 1238  sudo netplan generate
+ 1239  sudo nano /etc/netplan/02-netcfg.yaml
+ 1240  sudo netplan generate
+ 1241  sudo netplan apply
+ 1242  ip addr
+ 1243  ip route
+ 1244  ping 192.168.56.0/24
+ 1245  ping 192.168.56.10/24
+ 1246  ping 192.168.56.10
+ 1247  sudo nano /etc/netplan/02-netcfg.yaml
+ 1248  ls
+ 1249  ls -a
+ 1250  ls
+ 1251  tree
+ 1252  cd /Desktop/Dossier
+ 1253  cd Desktop/Dossier
+ 1254  ls
+ 1255  tailscale status
+ 1256  systemctl tailscale
+ 1257  sudo systemctl tailscale 
+ 1258  ls 
+ 1259  tree
+ 1260  cd Desktop/Dossier
+ 1261  ls
+ 1262  cd Database
+ 1263  sudo apt update
+ 1264  sudo apt install postresql postgresl-contrib -y
+ 1265  sudo apt install postgresql postgresl-contrib -y
+ 1266  sudo apt install postgresql postgresql-contrib -y
+ 1267  sudo system status postgresql
+ 1268  sudo systemctl status postgresql
+ 1269  sudo -u postgres psql
+ 1270  sudo nano /etc/postgresql/*/main/postgresql.conf
+ 1271  tailscale ip -4
+ 1272  tailscale status
+ 1273  sudo nano /etc/postgresql/*main/pg_hba.conf
+ 1274  sudo nano /etc/postgresql/*/main/pg_hba.conf
+ 1275  sudo systemctl restart postgresql
+ 1276  sudo systemctl status postgresql
+ 1277  sudo ufw default deny incoming
+ 1278  sudo ufw default allow outgoing
+ 1279  sudo nano /etc/postgresql/*/main/pg_hba.conf
+ 1280  sudo ufw allow from 100.116.178.80 to any port 5432 proto tcp
+ 1281  sudo ufw enable
+ 1282  sudo ufw status
+ 1283  sudo ufw status numbered
+ 1284  npm install pg
+ 1285  sudo apt install npm
+ 1286  sudo npm install pg
+ 1287  npm install pg
+ 1288  sudo systemctl pg status
+ 1289  sudo systemctl cat pg
+ 1290  ls
+ 1291  vi package-lock.json
+ 1292  vi package.json
+ 1293  cd node_modules
+ 1294  ls
+ 1295  cd ..
+ 1296  tre
+ 1297  tree
+ 1298  touch .env
+ 1299  nano .env
+ 1300  ls
+ 1301  ls -a
+ 1302  cat .env
+ 1303  sudo npm install dotenv
+ 1304  ls -a
+ 1305  nano .env
+ 1306  cat .env
+ 1307  sudo systemctl status postgresql
+ 1308  sudo -u postgres psql
+ 1309  sudo ss -tulpn | grep 5432
+ 1310  sudo ufw status 
+ 1311  sudo systemctl status postgresql
+ 1312  sudo ss -tulpn | grep 5432
+ 1313  sudo nano /etc/postgresql/*/main/pg_hba.conf
+ 1314  sudo ss -tulpn | grep 5432
+ 1315  sudo ufw status
+ 1316  tailscale ip -4
+ 1317  sudo -u postgres psql -c "SHOW config_file;"
+ 1318  sudo nano /et/cpostgresql/18/main/postgresql.conf
+ 1319  sudo nano /etc/postgresql/18/main/postgresql.conf
+ 1320  grep listen_addresses /etc/postgresql/*/main/postgresql.conf
+ 1321  sudo systemctl restart*postgresql
+ 1322  sudo systemctl restart postgresql
+ 1323  sudo ss -tulpn | grep 5432
+ 1324  sudo systemctl status postgresql > dataabase.txt
+ 1325  sudo ss -tulpn | grep 5432 >> database.txt
+ 1326  cat database.txt
+ 1327  tailscale status
+ 1328  ping 100.116.178.80
+ 1329  sudo systemctl status tailscaled
+ 1330  sudo ufw status verbose
+ 1331  sudo ufw disable
+ 1332  sudo ufw enable
+ 1333  tailscale pint 100.116.178.80
+ 1334  tailscale ping 100.116.178.80
+ 1335  tailscale status
+ 1336  sudo ss -tulpn | grep 5432
+ 1337  sudo -u postgrees psql
+ 1338  sudo -u postgres psql
+ 1339  psql -h 100.103.137.19 -U appuser -d milstone2
+ 1340  sudo nano /etc/postgresql/*/main/pg_hba.conf
+ 1341  sudo systemctl restart postgresql
+ 1342  sudo -u postgres psql -c "SHOW hba_file;"
+ 1343  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1344  sudo systemctl restart postgresql
+ 1345  sudo systemctl status  postgresql
+ 1346  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1347  sudo systemctl restart postgresql
+ 1348  sudo systemctl status  postgresql
+ 1349  sudo -u postgres psql
+ 1350  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1351  sudo systemctl restart postgresql
+ 1352  sudo systemctl status  postgresql
+ 1353  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1354  sudo systemctl restart postgresql
+ 1355  sudo systemctl status  postgresql
+ 1356  sudo -u posgres psql -c "SELECT line_number, type, database, user_name,address, auth_method, error FROM pg_hba_file_rules:"
+ 1357  sudo -u postgres psql -c "SELECT line_number, type, database, user_name,address, auth_method, error FROM pg_hba_file_rules:"
+ 1358  sudo -u postgres psql -c "SELECT line_number,type,database,user_name,address,auth_method,error FROM pg_hba_file_rules;"
+ 1359  sudo systemctl status postgresql@18-main
+ 1360  sudo systemctl status postgresql
+ 1361  sudo pg_lsclusters
+ 1362  sudo sed -n '120,130p' /etc/postgresql/18/main/pg_hba.conf
+ 1363  sudo sed +126  /etc/postgresql/18/main/pg_hba.conf
+ 1364  sudo tail -50 /var/log/postgresql/posgresql-18-main.log
+ 1365  sudo tail -50 /var/log/postgresql/postgresql-18-main.log
+ 1366  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1367  sudo systemctl restart postgresql
+ 1368  sudo systemctl status postgresql
+ 1369  sudo systemctl restart postgresql@18-main
+ 1370  sudo pg_lsclusters
+ 1371  sudo -u postgres psql
+ 1372  sudo ufw status verbose
+ 1373  sudo ss -tulpn | grep 5432
+ 1374  sudo apt update 
+ 1375  sudo apt install -y rsyslog
+ 1376  echo "*.* @@100.103.137.19:514" | sudo tee /etc/rsyslog.g/90-forward-to-vm4.conf
+ 1377  sudo ufw status verbose
+ 1378  echo ".@@100.73.103.97:514" | sudo tee /etc/rsyslog.d/90-forward-to*vm4.conf
+ 1379  sudo systemctl restart rsyslog
+ 1380  logger "hello from $(hostname)"
+ 1381  history 500 >> database_history.txt
+  999  ps aux | grep ssh
+ 1000  systemctl status ssh
+ 1001  sudo systemctl stop ssh
+ 1002  sudo systemctl status ssh
+ 1003  sudo systemctl start ssh
+ 1004  systemctl status ssh
+ 1005  sudo systemctl restart ssh
+ 1006  sudo systemctl enable ssh
+ 1007  sudo systemctl is-enabled ssh
+ 1008  cat history 20
+ 1009  history 40 > Lab7_history.txt
+ 1010  ls
+ 1011  cat Lab7_history.txt 
+ 1012  nano Lab7_history.txt 
+ 1013  cat Lab7_history.txt 
+ 1014  exit
+ 1015  tree
+ 1016  ls
+ 1017  cd
+ 1018  ls
+ 1019  cd ..
+ 1020  ls
+ 1021  cd oceanna-geroge/
+ 1022  ls
+ 1023  ls /var/log
+ 1024  ls /var/www
+ 1025  ls /var/www/html
+ 1026  pwd
+ 1027  ls /var
+ 1028  cd /var/www/html
+ 1029  ls
+ 1030  cat index.html
+ 1031  ls
+ 1032  nano index.html
+ 1033  ls -l
+ 1034  ls -a
+ 1035  ls -l
+ 1036  touch public.html
+ 1037  sudo touch public.html
+ 1038  ls
+ 1039  ls -l
+ 1040  ls
+ 1041  cat puclic.html
+ 1042  ls
+ 1043  sudo rm public.html
+ 1044  ls
+ 1045  sudo mkdir css
+ 1046  sudo mkdir js
+ 1047  ls
+ 1048  cd
+ 1049  ls
+ 1050  cd Downloads/
+ 1051  ls
+ 1052  sudo mv login.html register.html styles.css script.js /var/www/html
+ 1053  cd /var/www/html
+ 1054  ls
+ 1055  cd
+ 1056  cd Downloads/
+ 1057  sudo mv index.html index.html
+ 1058  sudo mv index.html index.html /var/www/html
+ 1059  sudo mv index.html /var/www/html
+ 1060  ls
+ 1061  mv index (1).html index.html
+ 1062  ls
+ 1063  sudo mv index.html /var/www/html
+ 1064  ls
+ 1065  cd /var/www/html
+ 1066  ls
+ 1067  cat index.html
+ 1068  git status
+ 1069  cd
+ 1070  ls
+ 1071  tree
+ 1072  ls
+ 1073  cd Desktop
+ 1074  ls
+ 1075  cd Dossier/
+ 1076  ls
+ 1077  git status
+ 1078  git track
+ 1079  git branch
+ 1080  git status
+ 1081  git add index.hmtl
+ 1082  cd 
+ 1083  ls
+ 1084  cd /var/www/html
+ 1085  ls
+ 1086  sudo cp index.html login.html register.html script.js styles.css /Desktop/Dossier
+ 1087  cd /Desktop/Dossier
+ 1088  cd
+ 1089  ls
+ 1090  pwd
+ 1091  cd Desktop/Dossier
+ 1092  ls
+ 1093  pwd
+ 1094  cd /var/www/html
+ 1095  sudo cp index.html login.html register.html script.js styles.css /home/oceanna-geroge/Desktop/Dossier
+ 1096  ls
+ 1097  cd /home/oceanna-geroge/Desktop/Dossier
+ 1098  ls
+ 1099  git status
+ 1100  git branch
+ 1101  git checkout front_end
+ 1102  git branch
+ 1103  git status
+ 1104  git add .
+ 1105  git commit
+ 1106  git status
+ 1107  git push origin front_end
+ 1108  git branch
+ 1109  git remote -v
+ 1110  git push -u origin front_end
+ 1111  sudo systemctl apache2
+ 1112  cd
+ 1113  quit
+ 1114  exit
+ 1115  ls
+ 1116  cd Desktop
+ 1117  ls
+ 1118  cd Dosier
+ 1119  cd Dossier
+ 1120  ls
+ 1121  git status
+ 1122  git checkout branch
+ 1123  git branch
+ 1124  git checkout master
+ 1125  git status
+ 1126  cd
+ 1127  pwd
+ 1128  ip address show
+ 1129  ip route
+ 1130  ip link state
+ 1131  ip link
+ 1132  ip a
+ 1133  ip link set en33 down
+ 1134  ip link set ens33 down
+ 1135  sudo ip link set ens33 down
+ 1136  ping google.com
+ 1137  sudo ip link set ens33 up
+ 1138  ping google.com
+ 1139  ip a
+ 1140  sudo ip link set ens33 down
+ 1141  ip a
+ 1142  sudo ip link set ens33 up
+ 1143  sudo ip link set ens33 down
+ 1144  sudo ip link set ens33 up
+ 1145  ip a
+ 1146  sudo ip a 192.168.1.100/24 dev ens33
+ 1147  sudo ip addr 192.168.1.100/24 dev ens33
+ 1148  ping google.com
+ 1149  history 20 >> recent_history.txt
+ 1150  ls
+ 1151  cat recent_history.txt 
+ 1152  history 80 >> recent_history.txt
+ 1153  ls
+ 1154  cat recent_history.txt 
+ 1155  rm recent_history.txt
+ 1156  ls
+ 1157  ufw status
+ 1158  sudo ufw status
+ 1159  tailscale status
+ 1160  tailscale version
+ 1161  sudo tailscale UP
+ 1162  tailscale status
+ 1163  cd /var/log
+ 1164  ls
+ 1165  cat syslog.1
+ 1166  ls
+ 1167  cd aoache2
+ 1168  cd apache2
+ 1169  ls
+ 1170  cd
+ 1171  apache2 status
+ 1172  history >> alltimehistory.txt
+ 1173  ls
+ 1174  vi alltimehistory.txt
+ 1175  ip a show
+ 1176  ipconfig
+ 1177  ip config
+ 1178  ip address
+ 1179  ipconfig
+ 1180  vi alltimehistory.txt
+ 1181  hostname -I
+ 1182  ip route
+ 1183  clear
+ 1184  exit
+ 1185  tailscale status
+ 1186  tailscale -v
+ 1187  ls
+ 1188  systemctl status
+ 1189  systemctl tailscale status
+ 1190  vi alltimehistory.txt
+ 1191  tailscale status
+ 1192  ip a
+ 1193  tailscale UP
+ 1194  sudo tailscale UP
+ 1195  ip a
+ 1196  tailscale UP
+ 1197  tailscale status
+ 1198  sudo tailscale UP
+ 1199  ip a
+ 1200  ping 100.116.178.80
+ 1201  ip a
+ 1202  hostname -I
+ 1203  ip a
+ 1204  sudo nano /etc/netplan/01-netcfg.yaml
+ 1205  sudo netplan generate
+ 1206  sudo nano /etc/netplan/01-netcfg.yaml
+ 1207  sudo netplan generate
+ 1208  sudo nano /etc/netplan/01-netcfg.yaml
+ 1209  sudo netplan generate
+ 1210  sudo netplan applu
+ 1211  sudo netplan apply
+ 1212  sudo nano /etc/netplan/01-netcfg.yaml
+ 1213  sudo netplan generate
+ 1214  sudo nano /etc/netplan/01-netcfg.yaml
+ 1215  sudo netplan generate
+ 1216  sudo nano /etc/netplan/01-netcfg.yaml
+ 1217  sudo netplan generate
+ 1218  sudo nano /etc/netplan/01-netcfg.yaml
+ 1219  sudo netplan generate
+ 1220  sudo nano /etc/netplan/01-netcfg.yaml
+ 1221  sudo netplan generate
+ 1222  sudo nano /etc/netplan/01-netcfg.yaml
+ 1223  sudo netplan generate
+ 1224  sudo nano /etc/netplan/01-netcfg.yaml
+ 1225  sudo netplan generate
+ 1226  sudo nano /etc/netplan/01-netcfg.yaml
+ 1227  sudo netplan generate
+ 1228  sudo nano /etc/netplan/01-netcfg.yaml
+ 1229  sudo netplan generate
+ 1230  sudo nano /etc/netplan/01-netcfg.yaml
+ 1231  sudo netplan generate
+ 1232  ip addr
+ 1233  sudo netplan apply
+ 1234  ip addr
+ 1235  ip route
+ 1236  sudo nano /etc/netplan/01-netcfg.yaml
+ 1237  sudo nano /etc/netplan/02-netcfg.yaml
+ 1238  sudo netplan generate
+ 1239  sudo nano /etc/netplan/02-netcfg.yaml
+ 1240  sudo netplan generate
+ 1241  sudo netplan apply
+ 1242  ip addr
+ 1243  ip route
+ 1244  ping 192.168.56.0/24
+ 1245  ping 192.168.56.10/24
+ 1246  ping 192.168.56.10
+ 1247  sudo nano /etc/netplan/02-netcfg.yaml
+ 1248  ls
+ 1249  ls -a
+ 1250  ls
+ 1251  tree
+ 1252  cd /Desktop/Dossier
+ 1253  cd Desktop/Dossier
+ 1254  ls
+ 1255  tailscale status
+ 1256  systemctl tailscale
+ 1257  sudo systemctl tailscale 
+ 1258  ls 
+ 1259  tree
+ 1260  cd Desktop/Dossier
+ 1261  ls
+ 1262  cd Database
+ 1263  sudo apt update
+ 1264  sudo apt install postresql postgresl-contrib -y
+ 1265  sudo apt install postgresql postgresl-contrib -y
+ 1266  sudo apt install postgresql postgresql-contrib -y
+ 1267  sudo system status postgresql
+ 1268  sudo systemctl status postgresql
+ 1269  sudo -u postgres psql
+ 1270  sudo nano /etc/postgresql/*/main/postgresql.conf
+ 1271  tailscale ip -4
+ 1272  tailscale status
+ 1273  sudo nano /etc/postgresql/*main/pg_hba.conf
+ 1274  sudo nano /etc/postgresql/*/main/pg_hba.conf
+ 1275  sudo systemctl restart postgresql
+ 1276  sudo systemctl status postgresql
+ 1277  sudo ufw default deny incoming
+ 1278  sudo ufw default allow outgoing
+ 1279  sudo nano /etc/postgresql/*/main/pg_hba.conf
+ 1280  sudo ufw allow from 100.116.178.80 to any port 5432 proto tcp
+ 1281  sudo ufw enable
+ 1282  sudo ufw status
+ 1283  sudo ufw status numbered
+ 1284  npm install pg
+ 1285  sudo apt install npm
+ 1286  sudo npm install pg
+ 1287  npm install pg
+ 1288  sudo systemctl pg status
+ 1289  sudo systemctl cat pg
+ 1290  ls
+ 1291  vi package-lock.json
+ 1292  vi package.json
+ 1293  cd node_modules
+ 1294  ls
+ 1295  cd ..
+ 1296  tre
+ 1297  tree
+ 1298  touch .env
+ 1299  nano .env
+ 1300  ls
+ 1301  ls -a
+ 1302  cat .env
+ 1303  sudo npm install dotenv
+ 1304  ls -a
+ 1305  nano .env
+ 1306  cat .env
+ 1307  sudo systemctl status postgresql
+ 1308  sudo -u postgres psql
+ 1309  sudo ss -tulpn | grep 5432
+ 1310  sudo ufw status 
+ 1311  sudo systemctl status postgresql
+ 1312  sudo ss -tulpn | grep 5432
+ 1313  sudo nano /etc/postgresql/*/main/pg_hba.conf
+ 1314  sudo ss -tulpn | grep 5432
+ 1315  sudo ufw status
+ 1316  tailscale ip -4
+ 1317  sudo -u postgres psql -c "SHOW config_file;"
+ 1318  sudo nano /et/cpostgresql/18/main/postgresql.conf
+ 1319  sudo nano /etc/postgresql/18/main/postgresql.conf
+ 1320  grep listen_addresses /etc/postgresql/*/main/postgresql.conf
+ 1321  sudo systemctl restart*postgresql
+ 1322  sudo systemctl restart postgresql
+ 1323  sudo ss -tulpn | grep 5432
+ 1324  sudo systemctl status postgresql > dataabase.txt
+ 1325  sudo ss -tulpn | grep 5432 >> database.txt
+ 1326  cat database.txt
+ 1327  tailscale status
+ 1328  ping 100.116.178.80
+ 1329  sudo systemctl status tailscaled
+ 1330  sudo ufw status verbose
+ 1331  sudo ufw disable
+ 1332  sudo ufw enable
+ 1333  tailscale pint 100.116.178.80
+ 1334  tailscale ping 100.116.178.80
+ 1335  tailscale status
+ 1336  sudo ss -tulpn | grep 5432
+ 1337  sudo -u postgrees psql
+ 1338  sudo -u postgres psql
+ 1339  psql -h 100.103.137.19 -U appuser -d milstone2
+ 1340  sudo nano /etc/postgresql/*/main/pg_hba.conf
+ 1341  sudo systemctl restart postgresql
+ 1342  sudo -u postgres psql -c "SHOW hba_file;"
+ 1343  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1344  sudo systemctl restart postgresql
+ 1345  sudo systemctl status  postgresql
+ 1346  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1347  sudo systemctl restart postgresql
+ 1348  sudo systemctl status  postgresql
+ 1349  sudo -u postgres psql
+ 1350  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1351  sudo systemctl restart postgresql
+ 1352  sudo systemctl status  postgresql
+ 1353  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1354  sudo systemctl restart postgresql
+ 1355  sudo systemctl status  postgresql
+ 1356  sudo -u posgres psql -c "SELECT line_number, type, database, user_name,address, auth_method, error FROM pg_hba_file_rules:"
+ 1357  sudo -u postgres psql -c "SELECT line_number, type, database, user_name,address, auth_method, error FROM pg_hba_file_rules:"
+ 1358  sudo -u postgres psql -c "SELECT line_number,type,database,user_name,address,auth_method,error FROM pg_hba_file_rules;"
+ 1359  sudo systemctl status postgresql@18-main
+ 1360  sudo systemctl status postgresql
+ 1361  sudo pg_lsclusters
+ 1362  sudo sed -n '120,130p' /etc/postgresql/18/main/pg_hba.conf
+ 1363  sudo sed +126  /etc/postgresql/18/main/pg_hba.conf
+ 1364  sudo tail -50 /var/log/postgresql/posgresql-18-main.log
+ 1365  sudo tail -50 /var/log/postgresql/postgresql-18-main.log
+ 1366  sudo nano /etc/postgresql/18/main/pg_hba.conf
+ 1367  sudo systemctl restart postgresql
+ 1368  sudo systemctl status postgresql
+ 1369  sudo systemctl restart postgresql@18-main
+ 1370  sudo pg_lsclusters
+ 1371  sudo -u postgres psql
+ 1372  sudo ufw status verbose
+ 1373  sudo ss -tulpn | grep 5432
+ 1374  sudo apt update 
+ 1375  sudo apt install -y rsyslog
+ 1376  echo "*.* @@100.103.137.19:514" | sudo tee /etc/rsyslog.g/90-forward-to-vm4.conf
+ 1377  sudo ufw status verbose
+ 1378  echo ".@@100.73.103.97:514" | sudo tee /etc/rsyslog.d/90-forward-to*vm4.conf
+ 1379  sudo systemctl restart rsyslog
+ 1380  logger "hello from $(hostname)"
+ 1381  history 500 >> database_history.txt
+ 1382  cat database_history.txt
+ 1383  history 385 >> database_history.txt
